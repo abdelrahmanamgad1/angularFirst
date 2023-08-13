@@ -1,28 +1,10 @@
-* {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: rgb(255, 255, 255) url(http://lorempixel.com/1920/1080/nature/);
-  font-family: Lato, Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  text-decoration: none;
-}
-
-#navbar {
-  background: #edf5e1;
-  color: rgb(255, 255, 255);
+:host {
   position: sticky;
   top: 0;
-  height: 60px;
+  z-index: 10;
+  background: #edf5e1;
+  color: rgb(255, 255, 255);
+  height: 80px;
   line-height: 60px;
 }
 
@@ -49,7 +31,6 @@ a {
   height: 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  
 }
 @media (max-width: 768px) {
   .logo {
@@ -66,10 +47,9 @@ a {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-
 }
 
-#navbar ul {
+:host ul {
   display: inline-block;
   float: right;
   list-style: none;
@@ -79,22 +59,24 @@ a {
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
 }
+
 @media (max-width: 640px) {
-  #navbar ul {
+  :host ul {
     display: none;
   }
 }
+
 @media (orientation: landscape) {
-  #navbar ul {
+  :host ul {
     display: inline-block;
   }
 }
 
-#navbar li {
+:host li {
   display: inline-block;
 }
 
-#navbar li a {
+:host li a {
   color: rgb(13, 0, 0);
   display: block;
   font-size: 0.9em;
@@ -109,14 +91,14 @@ a {
   -webkit-transition: all 0.5s ease;
 }
 
-#navbar li a:hover {
+:host li a:hover {
   color: rgb(238, 127, 127);
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
 
-#navbar li a:before,
-#navbar li a:after {
+:host li a:before,
+:host li a:after {
   content: "";
   position: absolute;
   width: 0%;
@@ -125,24 +107,23 @@ a {
   background: rgb(13, 26, 38);
 }
 
-#navbar li a:before {
+:host li a:before {
   left: 0;
   transition: 0.5s;
 }
 
-#navbar li a:after {
+:host li a:after {
   background: rgb(13, 26, 38);
   right: 0;
 }
 
-#navbar li a:hover:before {
+:host li a:hover:before {
   background: rgb(13, 26, 38);
   width: 100%;
   transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
 
-#navbar li a:hover:after {
+:host li a:hover:after {
   background: transparent;
   width: 100%;
 }
-
