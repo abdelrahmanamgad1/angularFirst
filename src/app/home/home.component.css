@@ -1,0 +1,10 @@
+section {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    width: 100%;
+    display: inline-block;
+    background: rgb(240, 240, 240);
+    height: 50vh;
+    text-align:center;
+    font-size: 22px;
+    font-weight: 700;
+  }
